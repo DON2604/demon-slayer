@@ -1,7 +1,7 @@
     .navbar {
       padding-left: 60px;
       padding-right: 60px;
-      background: linear-gradient(to right, yellow, orange);
+      background: linear-gradient(to right, yellow, rgb(251, 151, 29));
       border: 2px solid black;
       border-radius: 0;
       margin-left: -2px;
@@ -40,5 +40,10 @@
       background-size: 200% 100%;
       color: white;
       background-color: transparent;
+}
 
+body{
+  background: #ED4264;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFEDBC, #FF9C4B);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFEDBC, #FF9C4B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
