@@ -1,5 +1,4 @@
 # made by me
-from django.shortcuts import render
-def index1(request):
-    return render(request,'ds/index1.html')
-
+from django.http import HttpResponse
+def index(request):
+    return HttpResponse("hello")
