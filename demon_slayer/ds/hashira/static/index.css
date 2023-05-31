@@ -107,9 +107,8 @@ a, a:hover {
 	&.dark {
 		background-color: #18151f;
 	}
-	&.light {
-		background-color: #e1e5ea;
-	}
+	
+  
 	
 	.t-dark {
 		color: #18151f;
