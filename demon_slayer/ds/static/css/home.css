@@ -43,7 +43,7 @@ color: black;
 }
 
 
-<<<<<<< HEAD
+
 body{
 background: #ED4264 !important;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #FFEDBC, #FF9C4B) !important;  /* Chrome 10-25, Safari 5.1-6 */
@@ -122,7 +122,7 @@ h3 {
 .parallax-inner {
   padding: 20% 0;
 }
-=======
+
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 
 * {
@@ -191,4 +191,4 @@ h3{
 .parallax-inner{
     padding: 20% 0;
 }
->>>>>>> e2bb30495a458a1d571f35bc2514e65079166b97
+
