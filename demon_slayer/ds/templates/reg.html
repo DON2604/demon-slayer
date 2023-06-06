@@ -21,28 +21,37 @@
                         <button type='button'onclick='login()'class='toggle-btn'><h3>Login</h3></button>
                         <button type='button'onclick='register()'class='toggle-btn'><h3>Register</h3></button>
                     </div>
-                    <form id='login' class='input-group-login' action='/signup' method='post'>
+
+
+                    <!-- login -->
+                    <form id='login' class='input-group-login' action="/login" method="POST">
                        
-                        <input type='text'class='input-field'placeholder='Email Id' required >
+                        <input type='text'class='input-field' id='Username' name="Username" placeholder='Username' required >
                         
-                <input type='password'class='input-field'placeholder='Enter Password' required>
+                <input type='password'class='input-field' id='password1' name="password1" placeholder='Enter Password' required>
                 <div class="register">
                   <p>Don't have an account? <a href="#" onclick="slideToRegister()">Register</a></p>
                   </div>
+                  {% csrf_token %}   
                 <button type='submit'class='submit-btn'>Log in</button>
              </form>
-             <form id='register' class='input-group-register'>
+
+
+            <!-- reg -->
+             <form id='register' class='input-group-register' action='/signup' method='post'>
                 
-                <input type='text'class='input-field'placeholder='Username' required>
+                <input type='text' class='input-field' id='uname' name='uname' placeholder='Username' required>
               
-                 <input type='email'class='input-field'placeholder='Email Id' required>
+                 <input type='email' class='input-field' id='email' name='email' placeholder='Email Id' required>
                  
-                 <input type='password'class='input-field'placeholder='Enter Password' required>
+                 <input type='password' class='input-field' id='pass1' name='pass1' placeholder='Enter Password' required>
                  
-                 <input type='password'class='input-field'placeholder='Confirm Password'  required>
+                 <input type='password' class='input-field' id='pass2' name='pass2' placeholder='Confirm Password'  required>
                  <div class="register">
                     <p>Already have a account?<a href="#" onclick="slideToLogin()">Log in</a></p>
                   </div>
+
+                 {% csrf_token %} 
                 <button type='submit'class='submit-btn'>Register</button>
                  </form>
                 </div>

@@ -24,5 +24,8 @@ urlpatterns = [
     path('hashiras/', include('hashira.urls'), name='hashiras'),
     path('lowermoon/', include('demons.urls'), name='demons'),
     path('reg/', views.reg , name='reg'),
-    path('/signup', views.handleSignup , name='handleSignup')
+    path('signup', views.accr , name='accr'),
+    path('login', views.accin,  name="accin"),
+    path('logout', views.accout , name="accout"),
+
 ]
