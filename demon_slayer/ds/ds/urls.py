@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
     path('hashiras/', include('hashira.urls'), name='hashiras'),
-    path('lowermoon/', include('demons.urls'), name='demons')
+    path('lowermoon/', include('demons.urls'), name='demons'),
+    path('reg/', views.reg , name='reg'),
+    path('/signup', views.handleSignup , name='handleSignup')
 ]

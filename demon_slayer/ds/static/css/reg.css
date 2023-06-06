@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full-page
+{
+    height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(/static/img/login2.webp);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+
+.form-box
+{
+    width:380px;
+	height:500px;
+	position:relative;
+	margin:2% auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+	padding:10px;
+    overflow: hidden;
+}
+h3{
+    font-size: 1em;
+    color:rgb(15, 14, 14);
+    text-align: center;
+    
+
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+    background: transparent;
+    box-shadow: 0 0 20px 9px #ffffff1f;
+	border-radius: 30px;
+	outline: none;
+}
+.toggle-btn{
+    padding: 10px 28px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    position:  relative;
+    text-align: center;
+}
+#btn
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: #F3C693;
+	border: none;
+	outline: none;
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group-login
+{
+	top: 150px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+.input-group-register
+{
+    top: 120px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+
+
+.input-field
+{
+	width: 100%;
+	padding:10px 0;
+	margin:5px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid #999;
+	outline:none;
+	background: transparent;
+}
+
+.submit-btn
+{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: #F3C693;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+.register{
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.span
+{
+	color:#ffffff;
+	font-size:12px;
+	bottom:68px;
+	position:absolute;
+}
+#login
+{
+	left:50px;
+}
+#login input
+{
+	color:rgb(255, 255, 255);
+	font-size:15;
+}
+#register
+{
+	left:450px;
+}
+#register
+{
+	left:450px;
+}
