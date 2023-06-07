@@ -3,7 +3,7 @@
 import os
 import sys
 
-
+os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ds.settings')
