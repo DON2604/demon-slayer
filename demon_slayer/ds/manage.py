@@ -6,6 +6,9 @@ import sys
 
 os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
 
+sys.dont_write_bytecode = True
+
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ds.settings')
