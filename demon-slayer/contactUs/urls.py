@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.contact, name="contact")
+    path('', views.contact, name="contact"),
+    path('poster', views.sender,  name="sender"),  
     
 ]

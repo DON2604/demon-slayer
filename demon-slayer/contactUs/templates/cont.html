@@ -20,7 +20,9 @@
                 </div>
                 <div class="text"> 
                     <h3>Email</h3>
-                    <p>slayerhep152@gamil.com</p>
+                    <p>
+                    <a href="mailto:slayerhelp152@gmail.com" style="color: lightblue;">slayerhelp152@gmail.com</a>
+                    </p>
                 </div>
             </div>
             <div class="box">
@@ -35,19 +37,20 @@
               </div>
     </div>
     <div class="contactform">
-        <form>
+        <form action="/contactUs/poster" method="POST">
             <h2>Send Message</h2>
             <div class="inputbox">
-                <input type="fullname" required>
+                <input id='name' name="name" type="text" required>
                 <label for="">Full Name</label>
             </div><div class="inputbox">
-                <input type="email" required>
+                <input id='email' name="email" type="email" required>
                 <label for="">Email</label>
             </div><div class="inputbox">
-                <textarea type="text" required="required"></textarea>
+                <textarea id="msg" name="msg" type="text" required="required"></textarea>
                 <span>Type your Message</span>
             </div>
             <div class="">
+                {% csrf_token %} 
                 <input type="submit" name="" value="Send">
             </div>
         </form>
