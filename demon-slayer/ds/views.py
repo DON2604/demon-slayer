@@ -1,12 +1,28 @@
 # made by me
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
+import pyrebase
+
+
+context = {'user': None}
+config= {
+    "apiKey": "AIzaSyBcfDC6VHKgcojkWrN2p4oXuI500-koI30",
+    "authDomain": "test-7b70d.firebaseapp.com",
+    "databaseURL": "https://test-7b70d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "projectId": "test-7b70d",
+    "storageBucket": "test-7b70d.appspot.com",
+    "messagingSenderId": "761698859336",
+    "appId": "1:761698859336:web:cad6f078fcc44aa1b55b7d",
+    "measurementId": "G-SXP78VSD2W"
+}
+
+firebase = pyrebase.initialize_app(config)
+auth = firebase.auth()
 
 def index(request):
-    return render(request,'home.html')
+    return render(request,'home.html', context)
+
 
 def reg(request):
     return render(request, 'reg.html')
@@ -31,34 +47,36 @@ def accr(request):
             messages.error(request, "Passwords must contain only letters and numbers")
             return redirect('/')        
 
-
-        myuser = User.objects.create_user(uname, email, pass1)
-        myuser.save()
-        messages.success(request,'Your account has been created successfully')
-        return redirect('/')
+        try:
+            user = auth.create_user_with_email_and_password(email, pass1)
+            messages.success(request,'Your account has been created successfully')
+        except:
+            messages.error(request, "email already exists")
+        return render(request, 'home.html', context)
     else:
         return HttpResponse('404 not found')
-    
+      
 
 def accin (request):
     if request.method=="POST":
         # Get the post parameters
-        Username=request.POST['Username']
+        mailer=request.POST['mailer']
         password1=request.POST['password1']
 
-        user=authenticate(username= Username, password= password1)
-
-        if user is not None:
-            login(request, user)
+        try:
+            login_res = auth.sign_in_with_email_and_password(mailer, password1)
+            context = {'user': mailer}
             messages.success(request, "Successfully Logged In")
-            return redirect('/')
-        else:
-            messages.error(request, "Invalid credentials! Please try again")
-            return redirect('/')
+            return render(request, 'home.html', context)
 
-    return HttpResponse("404- Not found")
+        except:
+            messages.error(request, "Invalid credentials! Please try again")
+            context = {'user': None}
+            return render(request,'home.html', context)
+
+    return HttpResponse(" 😓😓 404- Not found")
 
 def accout(request):
-    logout(request)
+    auth.current_user = None
     messages.success(request, "Successfully logged out")
     return redirect('/')
