@@ -123,6 +123,8 @@ STATICFILES_DIRS=[
     BASE_DIR/ 'static',
     BASE_DIR / 'hashira/static',
     BASE_DIR / 'demons/static',
+    BASE_DIR / 'contactUs/static',
+
 ]
 
 
