@@ -64,3 +64,4 @@ jobs:
           app-name: 'demon-slayer-info'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D7CE03D1DC79481BB555840E6E584C93 }}
+          images: 'python-app'
