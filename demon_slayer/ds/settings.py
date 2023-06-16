@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -119,12 +121,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS=[
+""" STATICFILES_DIRS=[
     BASE_DIR/ 'static',
     BASE_DIR / 'hashira/static',
     BASE_DIR / 'demons/static',
     BASE_DIR / 'contactUs/static',
 
+]"""
+
+STATICFILES_DIRS=[ os.path.join(BASE_DIR, 'static'),
+                  os.path.join(BASE_DIR, 'hashira/static'),
+                  os.path.join(BASE_DIR, 'demons/static'),
+                  os.path.join(BASE_DIR, 'contactUs/static')
 ]
 
 
