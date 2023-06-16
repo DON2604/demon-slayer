@@ -54,6 +54,9 @@ jobs:
           name: python-app
           path: .
           
+      - name: Change working directory to demon-slayer
+        run: cd demon-slayer
+          
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
