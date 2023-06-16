@@ -29,7 +29,8 @@ urlpatterns = [
     path('signup', views.accr , name='accr'),
     path('login', views.accin,  name="accin"),
     path('logout', views.accout , name="accout"),
-    path('contactUs/',include('contactUs.urls'),name="contact")
+    path('contactUs/',include('contactUs.urls'),name="contact"),
+    path('spotlight/', include('spotlight.urls'), name='spotlight'),
 
 ]
 
